@@ -11,10 +11,9 @@ function loginFormProcessor(event) {
     }
 
     const loginData = {
-        a: event.target.elements.email.value,
-        b: event.target.elements.password.value,
+        [event.target.elements.email.attributes.name.nodeValue]: event.target.elements.email.value,
+        [event.target.elements.password.attributes.name.nodeValue]: event.target.elements.password.value,
     }
 
     loginForm.reset();
-    console.log(event);
 }
