@@ -11,7 +11,6 @@ colorizerBtn.addEventListener("click", colorizeWindow);
 function colorizeWindow() {
   const newColor = getRandomHexColor();
   
-  console.log(colorInformer.textContent);
   body.style.backgroundColor = newColor;
   colorInformer.textContent = newColor.toUpperCase();
 }

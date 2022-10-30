@@ -3,7 +3,6 @@ loginForm.addEventListener("submit", loginFormProcessor);
 
 function loginFormProcessor(event) {
     event.preventDefault();
-    console.dir(event);
 
     if (event.target.elements.email.value ==="" || event.target.elements.password.value === "") {
         alert("Всі поля повинні бути заповнені!");
@@ -15,5 +14,6 @@ function loginFormProcessor(event) {
         [event.target.elements.password.attributes.name.nodeValue]: event.target.elements.password.value,
     }
 
+    console.log(loginData);
     loginForm.reset();
 }
